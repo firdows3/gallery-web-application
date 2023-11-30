@@ -1,0 +1,64 @@
+.header-container{
+    padding: 30px 5px;
+    color: #263A47;
+}
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+.header-logo{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Yesteryear', cursive;
+}
+.header-navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    font-family: 'IM Fell Great Primer SC', serif;
+    font-size: 22px;
+}
+.header-navbar-left{
+    width: 140px;
+}
+.header-icon{
+    width: 20px;
+    height: 20px;
+}
+.header-navbar-center{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 20px;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+.each-header-link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #263A47;
+}
+.active{
+    border-bottom: #263A47 2px solid;
+    padding: 5px;
+}
+.header-navbar-right{
+    display: flex;
+    gap: 15px;
+}
+
+@media(max-width:820px){
+    .header-navbar-left{
+        width: 10px;
+    }
+}
+@media(max-width:647px){
+    .header-icon{
+        display: none;
+    }
+    .header-navbar-left{
+        width: 0px;
+    }
+}
+@media(max-width:455px){
+    .each-header-link{
+        font-size: 15px;
+    }
+}

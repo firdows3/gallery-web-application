@@ -1,0 +1,55 @@
+.footer-container{
+    width: 100%;
+    background-color: #2f3d48;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left, .all-footer-icons{
+    display: flex;
+    gap: 30px;
+    margin: 30px 30px 8px;
+}
+.footer-logo{
+    font-family: 'Yesteryear', cursive;
+    font-size: 25px;
+    color: #A2F2DF;
+    border-right: 3px solid #A2F2DF;
+    padding-right: 10px
+}
+.all-footer-links{
+    display: flex;
+    gap: 10px;
+    margin: 5px 5px 15px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+.footer-link{
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    color: #A2F2DF;
+}
+.footer-copyright{
+    color: #4F4D4F;
+    font-family: 'Itim', cursive;
+}
+.footer-icon{
+    width: 20px;
+    height: 20px;
+}
+
+
+@media(max-width:780px){
+    .footer-container{
+        display: block;
+    }
+    .footer-left, .footer-right{
+        width: 60%;
+        margin: 15px auto;
+        padding: 10px;
+    }
+}
+@media(max-width:600px){
+    .footer-left, .footer-right{
+        width: 80%;
+    }
+}
