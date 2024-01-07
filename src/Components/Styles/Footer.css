@@ -7,7 +7,7 @@
 .footer-left, .all-footer-icons{
     display: flex;
     gap: 30px;
-    margin: 30px 30px 8px;
+    margin: 30px 30px 0px;
 }
 .footer-logo{
     font-family: 'Yesteryear', cursive;
@@ -18,18 +18,17 @@
 }
 .all-footer-links{
     display: flex;
-    gap: 10px;
+    gap: 35px;
     margin: 5px 5px 15px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 .footer-link{
-    margin-left: 10px;
     text-decoration: none;
     font-family: 'Itim', cursive;
     color: #A2F2DF;
 }
 .footer-copyright{
-    color: #4F4D4F;
+    color: #676667;
     font-family: 'Itim', cursive;
 }
 .footer-icon{
@@ -43,13 +42,24 @@
         display: block;
     }
     .footer-left, .footer-right{
-        width: 60%;
-        margin: 15px auto;
+        margin: 15px auto 0px;
         padding: 10px;
     }
 }
 @media(max-width:600px){
     .footer-left, .footer-right{
         width: 80%;
+    }
+    .all-footer-links{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        margin: 5px;
+    }
+    .footer-left{
+        margin: 10px 30px 0px;
+    }
+    .all-footer-icons{
+        margin: 0px 5px 5px;
     }
 }

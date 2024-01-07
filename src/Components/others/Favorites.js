@@ -12,7 +12,7 @@ export default function Favorites ({ favoriteImage }){
         <div className="favorites-container">
             {favoriteImage.map(item => {
                 return(
-                    <img className="each-favorite-image" src={item} />
+                    <img className="each-favorite-image" src={item.image} />
                 )
             })}
         </div>}

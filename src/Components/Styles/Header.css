@@ -1,34 +1,21 @@
 .header-container{
-    padding: 30px 5px;
+    padding: 10px 5px;
     color: #263A47;
 }
 @import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 .header-logo{
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     font-weight: bold;
     font-family: 'Yesteryear', cursive;
 }
 .header-navbar{
     display: flex;
-    justify-content: space-between;
-    margin: 0px 10px;
+    justify-content: center;
+    gap: 60px;
     font-family: 'IM Fell Great Primer SC', serif;
     font-size: 22px;
-}
-.header-navbar-left{
-    width: 140px;
-}
-.header-icon{
-    width: 20px;
-    height: 20px;
-}
-.header-navbar-center{
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    margin-top: 20px;
-    font-family: 'IM Fell Great Primer SC', serif;
+    margin: 15px 0px;
 }
 .each-header-link{
     font-size: 18px;

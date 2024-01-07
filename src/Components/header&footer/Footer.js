@@ -1,7 +1,6 @@
 //Footer component for a gallery-like web application
 
 import "../Styles/Footer.css"
-import { Link } from "react-router-dom"
 import instagram from "../Images/instagram.png"
 import tiktok from "../Images/tiktok.png"
 import facebook from "../Images/facebook.png"
@@ -17,10 +16,10 @@ export default function Footer () {
                     <div className="footer-logo">Snapster</div>
                     <div>
                         <div className="all-footer-links">
-                            {/*links in the footer */}
-                            <Link to="/" className="footer-link"><div>Home</div></Link>
-                            <Link to="favorites" className="footer-link"><div>Favorites</div></Link>
-                            <Link to="blog" className="footer-link"><div>Blog</div></Link>
+                            <div className="footer-link">Contact Us</div>
+                            <div className="footer-link">About Us</div>
+                            <div className="footer-link">FAQs</div>
+                            <div className="footer-link">Privacy and policy</div>
                         </div>
                         <div className="footer-copyright">&copy;2023snapster. All rights reserved</div>
                     </div>

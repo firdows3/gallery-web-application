@@ -9,10 +9,10 @@
 .home-top-moto{
     text-align: center;
     font-family: 'Great Vibes', cursive;
-    font-size: 30px;
+    font-size: 25px;
     border-bottom: 3px solid #263A47;
     color: #263A47;
-    padding: 0px 40px 20px;
+    padding: 0px 40px 10px;
     width: 45%;
     margin: 0px auto 30px;
 }
@@ -21,15 +21,15 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 10px 0px 15px;
-    font-size: 18px;
+    margin: 5px 0px 10px;
+    font-size: 15px;
     font-family: 'Itim', cursive;
     color: #263A47;
     cursor: pointer;
 }
 .home-filtered-button{
     border: 1px solid #263A47;
-    padding: 5px 10px;
+    padding: 3px 10px;
     border-radius: 10px;
 }
 .active-category{
@@ -67,25 +67,48 @@
     width: 85%;
     margin: 0 auto;
     overflow: hidden;
-    height: 40vh;
+    height: 45vh;
     padding: 10px;
 }
-.swiper-button-prev {
-    left: 10px;
+
+
+.add-image-container{
+    height: 70vh;
+    overflow-y: auto;
 }
-.swiper-button-next {
-    right: 10px;
+.add-image-picture-container{
+    width: 280px;
+    height: 280px;
+    margin: 10px auto;
+}
+.add-image-picture{
+    width: 250px;
+    height: 230px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    border-radius: 5px;
+    border: 3px solid #263A47;
+}
+.home-add-icon-container{
+    width: 50px;
+    height: 50px;
+    margin: 30px auto;
+}
+.add-image-icon{
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    cursor: pointer;
 }
 
 .home-add-image{
-    width: 350px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
     border-radius: 15px;
-    text-align: center;
-    margin: 30px auto;
+    margin: 10px auto;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    width: 300px;
+    flex-direction: column;
+
 }
 .add-image-label{
     text-align: center;
@@ -96,17 +119,22 @@
     display: none;
 }
 .add-image-input{
-    padding: 3px;
     text-align: center;
-    background-color: transparent;
     outline: none;
+    font-family: 'Itim', cursive;
     border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
+    display: block;
+    margin: 20px auto 10px;
 }
 .add-icon{
-    font-size: 25px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
     cursor: pointer;
 }
-
 
 @media(max-width:1300px){
     .swiper-container{
@@ -166,8 +194,12 @@
         width: 75%;
     }
 }
-@media(max-width:470px){
+@media(max-width:480px){
     .home-top-moto{
         width: 70%;
+    }
+    .home-category-buttons{
+        gap: 15px;
+        font-size: 15px;
     }
 }

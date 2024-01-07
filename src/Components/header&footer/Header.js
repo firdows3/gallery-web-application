@@ -2,16 +2,11 @@
 
 import { Link } from "react-router-dom"
 import "../Styles/Header.css"
-import instagram from "../Images/instagram.png"
-import tiktok from "../Images/tiktok.png"
-import facebook from "../Images/facebook.png"
-import pinterest from "../Images/pinterest.png"
-import search from "../Images/search.png"
 import { useState } from "react"
 
 export default function Header () {
 
-    const [active, setActive] = useState(-1)
+    const [active, setActive] = useState(0)
 
     // an array for holding the header components
     const headerElements = [
@@ -33,9 +28,7 @@ export default function Header () {
         <>
         <div className="header-container">
             <div className="header-logo">Snapster</div>
-            <div className="header-navbar">
-                <div className="header-navbar-left header-logo">S</div>
-                <div className="header-navbar-center">
+                <div className="header-navbar">
                 {
                     headerElements.map((item, index) => {
                         return (
@@ -46,13 +39,6 @@ export default function Header () {
                     })
                 }
                 </div>
-                <div className="header-navbar-right"> 
-                    <img src={instagram} className="header-icon" />
-                    <img src={tiktok} className="header-icon" />
-                    <img src={facebook} className="header-icon" />
-                    <img src={pinterest} className="header-icon" />
-                </div>
-            </div>
         </div>
         </>
     )

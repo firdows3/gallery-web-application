@@ -4,8 +4,6 @@
 import "../Styles/Blog.css"
 import art4 from "../Images/art4.jpg";
 import art5 from "../Images/art5.jpg";
-import art1 from "../Images/art1.jpg";
-import art2 from "../Images/art2.jpg";
 import add from "../Images/add.png"
 import { useState } from "react";
 
@@ -24,13 +22,13 @@ export default function Blog () {
         },
     ])
     const [active, setActive] = useState(false);
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState('');
     const [description, setDescription] = useState('');
 
     const handleImage = (event) =>{
         // input image 
         event.preventDefault();
-        setImages(URL.createObjectURL(event.target.files[0]), ...images)
+        setImages(URL.createObjectURL(event.target.files[0]))
        }
 
     const handleDescription = (event) => {
@@ -39,16 +37,18 @@ export default function Blog () {
         setDescription(event.target.value)
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = () => {
         // pushing the description and the image to the array
         setBlogImages([{image: images, description: description}, ...blogImages]);
+        setImages('')
+        setDescription('')
     }
 
     return(
         <>
         <div className="blog-container">
             <div className="blog-buttons">
-                <div className="add-blog-button" onClick={() => setActive(true)}>Add Blog</div>
+                {active ?<div className="add-blog-button" onClick={() => setActive(false)}>Cancel</div> : <div className="add-blog-button" onClick={() => setActive(true)}>Add Blog</div>}
                 {active ? <div className="add-blog-button" 
                 onClick={() => {
                     setActive(false)
@@ -59,13 +59,14 @@ export default function Blog () {
             {active ?
             <> 
             <div className="each-blog-container">
+                {images !== '' ? <img className="blog-add-image" src={images} /> : 
                 <div className="blog-add-image">
                     <label>
                         <img src={add} className="blog-add-image-icon" />
                         <div>Add image</div>
                         <input type="file" className="add-image-input" onChange={handleImage} />
                     </label>
-                </div>
+                </div>}
                 <textarea className="blog-input-description" placeholder="Add your description for the image ..." onChange={handleDescription}/>
             </div>
             </> : <></>
